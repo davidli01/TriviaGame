@@ -54,3 +54,12 @@ console.log(QuestionNum);
 function result(){
 	if ()
 }
+
+var start = {
+	correct: 0,
+	incorrect: 0
+	counter: 120
+	countdown: function(){
+		game.counter--;
+	}
+}
