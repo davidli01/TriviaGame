@@ -3,7 +3,7 @@ function QuestionNum(question, choices, answer) {
 	this.question = question;
 	this.choices = choices;
 	this.answer = answer;
-};
+}
 
 var questionOne = new QuestionNum("In 'The Little Mermaid,' who is NOT one of Triton's daughters?", 
 									["Andrina", "Adora", "Arrina", "Alana"],
@@ -24,7 +24,7 @@ var questionFour = new QuestionNum("Which glass slipper did Cinderella leave beh
 var questionFive = new QuestionNum('In "Sleeping Beauty," what is the name of Maleficent’s pet raven?',
 									["Diablo", "Malum", "Mauvais", "Diable"],
 									"Diablo");
-var questionSix = new QuestionNum('Finish the lyrics: “Wouldn't you think I'm the girl, the girl who has everything? Look at this trove, treasures untold…”',
+var questionSix = new QuestionNum('Finish the lyrics: "Wouldn\'t you think I\'m the girl, the girl who has everything? Look at this trove, treasures untold…"',
 									["It's full of gizmos and gadgets galore.", 
 									"Wonders from all over the world.", 
 									"There so much to be known.", 
@@ -49,8 +49,8 @@ var questionTen = new QuestionNum('Finish the lyrics: “My soul is spiraling in
 									"And all my problems are far gone in the past."],
 									"And one thought crystallizes like an icy blast.");
 
-console.log(QuestionNum);
-
+console.log(questionTen);
+/*
 function result(){
 	if ()
 }
@@ -63,3 +63,4 @@ var start = {
 		game.counter--;
 	}
 }
+*/
