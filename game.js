@@ -50,8 +50,10 @@ var questionTen = new QuestionNum('Finish the lyrics: “My soul is spiraling in
 									"And one thought crystallizes like an icy blast.");
 
 console.log(questionTen);
-console.log(QuestionNum);
+console.log(new QuestionNum);
 
+var question = 
+/*
 var box = document.querySelector('.questionBox');
 //start object
 var start = {
@@ -73,6 +75,8 @@ var start = {
 		document.
 	}
 }
+*/
+
 /*
 function result(){
 	if ()
