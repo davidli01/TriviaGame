@@ -50,6 +50,16 @@ var questionTen = new QuestionNum('Finish the lyrics: “My soul is spiraling in
 									"And one thought crystallizes like an icy blast.");
 
 console.log(questionTen);
+//start object
+var start = {
+	correct: 0,
+	incorrect: 0,
+	counter: 100,
+	count: function(){
+		this.counter--;
+		document.
+	}
+}
 /*
 function result(){
 	if ()
