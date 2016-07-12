@@ -50,11 +50,24 @@ var questionTen = new QuestionNum('Finish the lyrics: “My soul is spiraling in
 									"And one thought crystallizes like an icy blast.");
 
 console.log(questionTen);
+console.log(QuestionNum);
+
+var box = document.querySelector('.questionBox');
 //start object
 var start = {
 	correct: 0,
 	incorrect: 0,
 	counter: 100,
+	begin: function(){
+		timer = setInterval(game.countdown, 1000);
+
+		document.querySelector('.wapper').appendChild('<p>Remaining Time: <span class="countNum">120</span> Seconds</p>');
+		document.querySelector('.submit').remove();
+
+		for (var i = 0; i < question.length; i++){
+			box.appendChild('<p>' + questions
+		}
+	}
 	count: function(){
 		this.counter--;
 		document.
