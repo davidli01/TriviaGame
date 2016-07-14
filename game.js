@@ -1,4 +1,5 @@
 
+var questions = [];
 function QuestionNum(question, choices, answer) {
 	this.question = question;
 	this.choices = choices;
@@ -49,10 +50,70 @@ var questionTen = new QuestionNum('Finish the lyrics: “My soul is spiraling in
 									"And all my problems are far gone in the past."],
 									"And one thought crystallizes like an icy blast.");
 
-console.log(questionTen);
-console.log(new QuestionNum);
+//console.log(questionTen);
+questions.push(questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen);
+console.log(questions);
 
-var question = 
+var box = document.querySelector('.questionBox');
+//starting number
+var number = 120;
+//function to decrement
+//this function decrements number
+//creates span
+//appends apan to wrapper
+//places the number into span
+function decrement(){
+	number--;
+	//created a span to contain the number counter
+	var div = document.createElement("SPAN");
+	//append the span to the wrapper
+	document.querySelector(".wrapper").appendChild(div);
+	//select the span 
+	var span = document.querySelector("span");
+	console.log(span);
+	//place number into span
+	span.innerHTML = '<h2>' + number + '</h2>';
+	//currently this function only decrements once,
+	//unless you call the function multiple times
+}
+//count function will create an interval
+function count(){
+	//setinterval is a method that passes a function to be executed
+	//in this case the decrement function
+	//also passes a interval in milliseconds that will determine how often to execute the code
+	counter = setInterval(decrement, 1000);
+}
+
+//count();
+
+
+/*
+function start() {
+
+	function counting(){
+		counter = 120;
+		var c = counter--;
+		var div = document.createElement()
+	}
+	console.log(counting);
+	timer = setInterval(start.counting, 1000);
+	//create span
+	var span = document.createElement("SPAN");
+	//put 
+	//create <p>
+	var para = document.createElement("P");
+	//create text node
+	var t = document.createTextNode("Timer: " + counting + " seconds");
+	//append the text to <p>
+	para.appendChild(t);
+	//append <p> to wrapper
+	document.querySelector(".wrapper").appendChild(para);
+
+}
+
+document.querySelector(".submit").onclick = start;
+*/
+//var question = 
 /*
 var box = document.querySelector('.questionBox');
 //start object
