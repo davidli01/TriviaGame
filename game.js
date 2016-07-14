@@ -95,8 +95,16 @@ var begin = {
 	//function to count down
 	counter: function(){
 		begin.time--;
-		//place timer into span, that will be created later
-		span.innerHTML = '<h2>' + timer + '</h2>';	
+		//created a span to contain the number counter
+		var div = document.createElement("SPAN");
+		//append the span to the wrapper
+		document.querySelector(".wrapper").appendChild(div);
+		//select the span 
+		var span = document.querySelector("span");
+		//console.log(span);
+		//create the span mentioned in the counter function
+		span.innerHTML = '<h2>Time Remaining: ' + begin.time + ' Seconds</h2>';
+			
 	//if statement to stop the timer and indicate times up
 		if (begin.time === 0){
 			console.log('Times up');
@@ -104,8 +112,14 @@ var begin = {
 			begin.done();
 		}
 	},
-	//above are variables
-	
+	//start function, this happens when start button is clicked
+	start: function(){
+		//create a timer for the questions
+		//the function that is called is decrementing
+		//by 1000 milliseconds
+		timer = setInterval(begin.counter, 1000);
+		
+	},
 };
 
-begin.counter();
+//begin.start();
