@@ -53,7 +53,7 @@ var questionTen = new QuestionNum('Finish the lyrics: “My soul is spiraling in
 //console.log(questionTen);
 questions.push(questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen);
 console.log(questions);
-
+/*
 var box = document.querySelector('.questionBox');
 //starting number
 var number = 120;
@@ -83,72 +83,29 @@ function count(){
 	//also passes a interval in milliseconds that will determine how often to execute the code
 	counter = setInterval(decrement, 1000);
 }
+*/
 
 //count();
 
-
-/*
-function start() {
-
-	function counting(){
-		counter = 120;
-		var c = counter--;
-		var div = document.createElement()
-	}
-	console.log(counting);
-	timer = setInterval(start.counting, 1000);
-	//create span
-	var span = document.createElement("SPAN");
-	//put 
-	//create <p>
-	var para = document.createElement("P");
-	//create text node
-	var t = document.createTextNode("Timer: " + counting + " seconds");
-	//append the text to <p>
-	para.appendChild(t);
-	//append <p> to wrapper
-	document.querySelector(".wrapper").appendChild(para);
-
-}
-
-document.querySelector(".submit").onclick = start;
-*/
-//var question = 
-/*
-var box = document.querySelector('.questionBox');
-//start object
-var start = {
+//create object that will begin the game as you click start
+var begin = {
 	correct: 0,
 	incorrect: 0,
-	counter: 100,
-	begin: function(){
-		timer = setInterval(game.countdown, 1000);
-
-		document.querySelector('.wapper').appendChild('<p>Remaining Time: <span class="countNum">120</span> Seconds</p>');
-		document.querySelector('.submit').remove();
-
-		for (var i = 0; i < question.length; i++){
-			box.appendChild('<p>' + questions
+	time: 120,
+	//function to count down
+	counter: function(){
+		begin.time--;
+		//place timer into span, that will be created later
+		span.innerHTML = '<h2>' + timer + '</h2>';	
+	//if statement to stop the timer and indicate times up
+		if (begin.time === 0){
+			console.log('Times up');
+			//done function will be defined later
+			begin.done();
 		}
-	}
-	count: function(){
-		this.counter--;
-		document.
-	}
-}
-*/
+	},
+	//above are variables
+	
+};
 
-/*
-function result(){
-	if ()
-}
-
-var start = {
-	correct: 0,
-	incorrect: 0
-	counter: 120
-	countdown: function(){
-		game.counter--;
-	}
-}
-*/
+begin.counter();
