@@ -53,6 +53,7 @@ var questionTen = new QuestionNum('Finish the lyrics: “My soul is spiraling in
 //console.log(questionTen);
 questions.push(questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen);
 console.log(questions);
+var box = document.querySelector(".questionBox");
 /*
 var box = document.querySelector('.questionBox');
 //starting number
@@ -118,8 +119,23 @@ var begin = {
 		//the function that is called is decrementing
 		//by 1000 milliseconds
 		timer = setInterval(begin.counter, 1000);
-		
+		//remove start button
+		//make start button hidden/ disappear
+		document.querySelector(".submit").style.visibility = "hidden";
+
+		//display all the question
+		//loop through questions
+		for (var i = 0; i < questions.length; i++) {
+			//during the loops display questions into question box
+			box.innerHTML = questions[i];
+			console.log(box);
+
+		}
 	},
 };
 
+document.querySelector(".submit").onclick = begin.start;
 //begin.start();
+
+
+
