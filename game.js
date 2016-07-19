@@ -1,4 +1,4 @@
-
+/*
 var questions = [];
 function QuestionNum(question, choices, answer) {
 	this.question = question;
@@ -49,10 +49,67 @@ var questionTen = new QuestionNum('Finish the lyrics: “My soul is spiraling in
 									"Somehow I've now been given a new chance.",
 									"And all my problems are far gone in the past."],
 									"And one thought crystallizes like an icy blast.");
+*/
 
+var questions = 
+[
+	{
+		question:"In 'The Little Mermaid,' who is NOT one of Triton's daughters?",
+		choices:["Andrina", "Adora", "Arrina", "Alana"],
+		answer:"Adora"
+	}, {
+		question:'Which phrase does the Evil Queen in "Snow White" actually say?',
+		choices:["Mirror, mirror, on the wall - who is the fairest of them all?",
+				"Magic mirror, on the wall - who is the fairest one of all?",
+				"Mirror, mirror, on the wall - who is the fairest one of all?",
+				"Magic mirror, on the wall - who is the fairest of them all?"],
+		answer:"Magic mirror, on the wall - who is the fairest one of all?"
+	}, {
+		question:"In the movie 'Tangled,' Flynn Rider is wanted dead or alive according to his wanted poster because he's a...",
+		choices:["Bandit", "Thief", "Treason", "Robber"],
+		answer:"Thief"
+	}, {
+		question:"Which glass slipper did Cinderella leave behind at the ball?",
+		choices:["Left", "Right"],
+		answer:"Left"
+	}, {
+		question:'In "Sleeping Beauty," what is the name of Maleficent’s pet raven?',
+		choices:["Diablo", "Malum", "Mauvais", "Diable"],
+		answer:"Diablo"
+	}, {
+		question:'Finish the lyrics: "Wouldn\'t you think I\'m the girl, the girl who has everything? Look at this trove, treasures untold…"',
+		choices:["It's full of gizmos and gadgets galore.", 
+				"Wonders from all over the world.", 
+				"There so much to be known.", 
+				"How many wonders can one cavern hold?"],
+		answer:"How many wonders can one carven hold?"
+	}, {
+		question:'In "Pocahontas," what did Pocahontas see in her dream that made her believe that a change was coming?',
+		choices:["A spinning arrow", 
+				"A strange cloud formation", 
+				"A hawk circling her village", 
+				"A burning blue fire"],
+		answer:"A spinning arrow"
+	}, {
+		question:"In 'The Lion King,' what side of Scar's face is his scar on?",
+		choices:["Left", "Right"],
+		answer:"Left"
+	}, {
+		question:'In "Frozen," how many brothers does Hans have?',
+		choices:["7", "9", "12", "15"],
+		answer:"12"
+	}, {
+		question:'Finish the lyrics: “My soul is spiraling in frozen fractals all around…”',
+		choices:["That wraps my heart in a cold and distant past.",
+				"And one thought crystallizes like an icy blast.",
+				"Somehow I've now been given a new chance.",
+				"And all my problems are far gone in the past."],
+		answer:"And one thought crystallizes like an icy blast."
+	}
+];
 //console.log(questionTen);
-questions.push(questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen);
-console.log(questions);
+//questions.push(questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen);
+//console.log(questions);
 var box = document.querySelector(".questionBox");
 
 //create object that will begin the game as you click start
@@ -94,7 +151,7 @@ var begin = {
 		//loop through questions
 		for (var i = 0; i < questions.length; i++) {
 			//during the loops display questions into question box
-			box.innerHTML = questions[i];
+			box.innerHTML = questions[i].question;
 			console.log(box);
 
 		}
