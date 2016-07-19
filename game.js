@@ -151,7 +151,10 @@ var begin = {
 		//loop through questions
 		for (var i = 0; i < questions.length; i++) {
 			//during the loops display questions into question box
-			box.innerHTML = questions[i].question;
+			var div = document.createElement('DIV');
+			var text = document.createTextNode(questions[i].question);
+			div.appendChild(text);
+			box.appendChild(div);
 			console.log(box);
 
 		}
