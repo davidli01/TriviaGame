@@ -54,18 +54,18 @@ var questionTen = new QuestionNum('Finish the lyrics: “My soul is spiraling in
 var questions = 
 [
 	{
-		question:"In 'The Little Mermaid,' who is NOT one of Triton's daughters?",
+		question:"In \'The Little Mermaid,\' who is NOT one of Triton's daughters?",
 		choices:["Andrina", "Adora", "Arrina", "Alana"],
 		answer:"Adora"
 	}, {
-		question:'Which phrase does the Evil Queen in "Snow White" actually say?',
+		question:'Which phrase does the Evil Queen in \"Snow White\" actually say?',
 		choices:["Mirror, mirror, on the wall - who is the fairest of them all?",
 				"Magic mirror, on the wall - who is the fairest one of all?",
 				"Mirror, mirror, on the wall - who is the fairest one of all?",
 				"Magic mirror, on the wall - who is the fairest of them all?"],
 		answer:"Magic mirror, on the wall - who is the fairest one of all?"
 	}, {
-		question:"In the movie 'Tangled,' Flynn Rider is wanted dead or alive according to his wanted poster because he's a...",
+		question:"In the movie \"Tangled,\" Flynn Rider is wanted dead or alive according to his wanted poster because he's a...",
 		choices:["Bandit", "Thief", "Treason", "Robber"],
 		answer:"Thief"
 	}, {
@@ -73,33 +73,33 @@ var questions =
 		choices:["Left", "Right"],
 		answer:"Left"
 	}, {
-		question:'In "Sleeping Beauty," what is the name of Maleficent’s pet raven?',
+		question:'In \"Sleeping Beauty,\" what is the name of Maleficent’s pet raven?',
 		choices:["Diablo", "Malum", "Mauvais", "Diable"],
 		answer:"Diablo"
 	}, {
-		question:'Finish the lyrics: "Wouldn\'t you think I\'m the girl, the girl who has everything? Look at this trove, treasures untold…"',
+		question:'Finish the lyrics: "Wouldn\'t you think I\'m the girl, the girl who has everything? Look at this trove, treasures untold..."',
 		choices:["It's full of gizmos and gadgets galore.", 
 				"Wonders from all over the world.", 
 				"There so much to be known.", 
 				"How many wonders can one cavern hold?"],
 		answer:"How many wonders can one carven hold?"
 	}, {
-		question:'In "Pocahontas," what did Pocahontas see in her dream that made her believe that a change was coming?',
+		question:'In \"Pocahontas,\" what did Pocahontas see in her dream that made her believe that a change was coming?',
 		choices:["A spinning arrow", 
 				"A strange cloud formation", 
 				"A hawk circling her village", 
 				"A burning blue fire"],
 		answer:"A spinning arrow"
 	}, {
-		question:"In 'The Lion King,' what side of Scar's face is his scar on?",
+		question:"In \'The Lion King,\'' what side of Scar's face is his scar on?",
 		choices:["Left", "Right"],
 		answer:"Left"
 	}, {
-		question:'In "Frozen," how many brothers does Hans have?',
+		question:'In \"Frozen\", how many brothers does Hans have?',
 		choices:["7", "9", "12", "15"],
 		answer:"12"
 	}, {
-		question:'Finish the lyrics: “My soul is spiraling in frozen fractals all around…”',
+		question:'Finish the lyrics: \"My soul is spiraling in frozen fractals all around...\"',
 		choices:["That wraps my heart in a cold and distant past.",
 				"And one thought crystallizes like an icy blast.",
 				"Somehow I've now been given a new chance.",
@@ -124,11 +124,14 @@ var begin = {
 		var div = document.createElement("SPAN");
 		//append the span to the wrapper
 		document.querySelector(".wrapper").appendChild(div);
-		//select the span 
+		//select the created span 
 		var span = document.querySelector("span");
 		//console.log(span);
 		//create the span mentioned in the counter function
 		span.innerHTML = '<h2>Time Remaining: ' + begin.time + ' Seconds</h2>';
+		//create another timer in the time div
+		var time = document.querySelector('.time');
+		time.innerHTML = '<h2>Time Remaining: ' + begin.time + ' Seconds</h2>';
 			
 	//if statement to stop the timer and indicate times up
 		if (begin.time === 0){
@@ -151,9 +154,17 @@ var begin = {
 		//loop through questions
 		for (var i = 0; i < questions.length; i++) {
 			//during the loops display questions into question box
+			//create div to hold question, this will be part of the loop
+			//creating div for every question, part of loop
 			var div = document.createElement('DIV');
+			//place question in textnode
 			var text = document.createTextNode(questions[i].question);
+			//create a break
+			var bre = document.createElement('BR');
+			//append text node to div
 			div.appendChild(text);
+			div.appendChild(bre);
+			//append div to box
 			box.appendChild(div);
 			console.log(box);
 
