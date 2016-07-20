@@ -152,6 +152,8 @@ var begin = {
 
 		//display all the question
 		//loop through questions
+		//loop questions to apply code to each, within each question
+		//loop through choices and apply code to those choices
 		for (var i = 0; i < questions.length; i++) {
 			//during the loops display questions into question box
 			//create div to hold question, this will be part of the loop
@@ -167,7 +169,16 @@ var begin = {
 			//append div to box
 			box.appendChild(div);
 			console.log(box);
-
+				//within the loop create another loop
+				//to display choices
+				//loop through the choices to display each individually
+				for (var c = 0; c < questions[i].choices.length; c++) {
+					//select choices and start from the object
+					var textC = questions[i].choices[c];
+					//console.log(textC);
+					//create element in document to manipulate
+					var divC = document.createElement('DIV')
+				}
 		}
 	},
 };
