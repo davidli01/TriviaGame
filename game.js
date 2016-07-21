@@ -115,7 +115,7 @@ var begin = {
 			div.appendChild(text);
 			div.appendChild(bre);
 			//append div to box
-			box.appendChild(div);
+			//box.appendChild(div);
 			console.log(box);
 				//within the loop create another loop
 				//to display choices
@@ -125,8 +125,16 @@ var begin = {
 					var textC = questions[i].choices[c];
 					//console.log(textC);
 					//create element in document to manipulate
-					var divC = document.createElement('DIV')
+					//var divC = document.createElement('DIV');
+					//create input tag and textnode 
+					//input tag for the textnode to be responsive
+					var input = document.createElement('DIV');
+					var textNode = document.createTextNode(textC);
+					//append text into input tag
+					input.appendChild(textNode);
+					div.appendChild(input);
 				}
+			box.appendChild(div);
 		}
 	},
 };
