@@ -21,7 +21,7 @@ var questions =
 		choices:["Left", "Right"],
 		answer:"Left"
 	}, {
-		question:'In \"Sleeping Beauty,\" what is the name of Maleficent’s pet raven?',
+		question:'In \"Sleeping Beauty,\" what is the name of Maleficent\'s pet raven?',
 		choices:["Diablo", "Malum", "Mauvais", "Diable"],
 		answer:"Diablo"
 	}, {
@@ -141,16 +141,35 @@ var begin = {
 					div.appendChild(input);
 					
 				}
-			//append choices and question into div
-			box.appendChild(div);
 			//grab all buttons to use with loop
 			var but = document.querySelectorAll('button');
+
+			//create embedded answer to the question
+			//acquire answer for question
+			var a = questions[i].answer
+			var ansBox = document.createElement("P");
+			var ansText = document.createTextNode(a);
+			ansBox.appendChild(ansText);
+			div.appendChild(ansBox);
+
+			//append choices and question into div
+			box.appendChild(div);
+
+
+			//console.log(a);
 			//loop through all buttons
 			for (var b = 0; b < but.length; b++){
 				//button[b] clicked execute this function
 				but[b].onclick = function(){
-					//
-					console.log(this);
+					//console.log the buttons content(innerHTML)
+					console.log(this.innerHTML);
+					var o = this.innerHTML;
+					console.log(this.parentNode.lastChild.innerHTML);
+					var p = this.parentNode.lastChild.innerHTML;
+					//if (this.innerHTMl === this.parentNode().answer)
+					if ( o === p ) {
+
+					}
 				}
 			}
 		}
