@@ -60,6 +60,10 @@ var questions =
 //console.log(questions);
 var box = document.querySelector(".questionBox");
 
+function click(event){
+	var ans = event.target.nodeName;
+	console.log(ans);
+}
 //create object that will begin the game as you click start
 var begin = {
 	correct: 0,
@@ -89,7 +93,7 @@ var begin = {
 		}
 	},
 	//start function, this happens when start button is clicked
-	start: function(){
+	start: function(event){
 		//create a timer for the questions
 		//the function that is called is decrementing
 		//by 1000 milliseconds
@@ -97,6 +101,7 @@ var begin = {
 		//remove start button
 		//make start button hidden/ disappear
 		document.querySelector(".submit").style.visibility = "hidden";
+
 
 		//display all the question
 		//loop through questions
@@ -128,13 +133,26 @@ var begin = {
 					//var divC = document.createElement('DIV');
 					//create input tag and textnode 
 					//input tag for the textnode to be responsive
-					var input = document.createElement('DIV');
+					var input = document.createElement('BUTTON');
+				
 					var textNode = document.createTextNode(textC);
 					//append text into input tag
 					input.appendChild(textNode);
 					div.appendChild(input);
+					
 				}
+			//append choices and question into div
 			box.appendChild(div);
+			//grab all buttons to use with loop
+			var but = document.querySelectorAll('button');
+			//loop through all buttons
+			for (var b = 0; b < but.length; b++){
+				//button[b] clicked execute this function
+				but[b].onclick = function(){
+					//
+					console.log(this);
+				}
+			}
 		}
 	},
 };
