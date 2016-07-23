@@ -1,3 +1,4 @@
+
 .questionBox div {
 	border: 2px solid blue;
 	border-radius: 5px;
@@ -7,6 +8,7 @@
 
 p {
 	visibility: hidden;
+	margin: 0px;
 }
 
 button {

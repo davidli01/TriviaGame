@@ -55,6 +55,10 @@ var questions =
 		answer:"And one thought crystallizes like an icy blast."
 	}
 ];
+
+var correct = 0;
+var wrong = 0;
+var unanswered = 0;
 //console.log(questionTen);
 //questions.push(questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen);
 //console.log(questions);
@@ -166,9 +170,12 @@ var begin = {
 					var o = this.innerHTML;
 					console.log(this.parentNode.lastChild.innerHTML);
 					var p = this.parentNode.lastChild.innerHTML;
-					//if (this.innerHTMl === this.parentNode().answer)
-					if ( o === p ) {
-
+					if (o === p) {
+						correct++
+						console.log("Correct: " + correct);
+					} else {
+						wrong++
+						console.log("Wrong: " + wrong);
 					}
 				}
 			}
