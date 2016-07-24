@@ -159,23 +159,36 @@ var begin = {
 			//append choices and question into div
 			box.appendChild(div);
 
-
 			//console.log(a);
 			//loop through all buttons
 			for (var b = 0; b < but.length; b++){
+
 				//button[b] clicked execute this function
 				but[b].onclick = function(){
+
 					//console.log the buttons content(innerHTML)
 					console.log(this.innerHTML);
 					var o = this.innerHTML;
 					console.log(this.parentNode.lastChild.innerHTML);
 					var p = this.parentNode.lastChild.innerHTML;
+
 					if (o === p) {
 						correct++
 						console.log("Correct: " + correct);
+						//disableBut();
+						var dis = this.parentNode.querySelectorAll('button');
+						console.log(dis);
+						for(var on = 0; on < dis.length; on++){
+							dis[on].setAttribute('disabled', 'disabled');
+						}
 					} else {
 						wrong++
 						console.log("Wrong: " + wrong);
+						var dis = this.parentNode.querySelectorAll('button');
+						console.log(dis);
+						for(var on = 0; on < dis.length; on++){
+							dis[on].setAttribute('disabled', 'disabled');
+						}
 					}
 				}
 			}
