@@ -2,58 +2,46 @@
 var questions = 
 [
 	{
-		question:"In \'The Little Mermaid,\' who is NOT one of Triton's daughters?",
-		choices:["Andrina", "Adora", "Arrina", "Alana"],
-		answer:"Adora"
-	}, {
-		question:'Which phrase does the Evil Queen in \"Snow White\" actually say?',
-		choices:["Mirror, mirror, on the wall - who is the fairest of them all?",
-				"Magic mirror, on the wall - who is the fairest one of all?",
-				"Mirror, mirror, on the wall - who is the fairest one of all?",
-				"Magic mirror, on the wall - who is the fairest of them all?"],
-		answer:"Magic mirror, on the wall - who is the fairest one of all?"
-	}, {
-		question:"In the movie \"Tangled,\" Flynn Rider is wanted dead or alive according to his wanted poster because he's a...",
-		choices:["Bandit", "Thief", "Treason", "Robber"],
-		answer:"Thief"
-	}, {
-		question:"Which glass slipper did Cinderella leave behind at the ball?",
-		choices:["Left", "Right"],
-		answer:"Left"
-	}, {
-		question:'In \"Sleeping Beauty,\" what is the name of Maleficent\'s pet raven?',
-		choices:["Diablo", "Malum", "Mauvais", "Diable"],
-		answer:"Diablo"
-	}, {
-		question:'Finish the lyrics: "Wouldn\'t you think I\'m the girl, the girl who has everything? Look at this trove, treasures untold..."',
-		choices:["It's full of gizmos and gadgets galore.", 
-				"Wonders from all over the world.", 
-				"There so much to be known.", 
-				"How many wonders can one cavern hold?"],
-		answer:"How many wonders can one carven hold?"
-	}, {
-		question:'In \"Pocahontas,\" what did Pocahontas see in her dream that made her believe that a change was coming?',
-		choices:["A spinning arrow", 
-				"A strange cloud formation", 
-				"A hawk circling her village", 
-				"A burning blue fire"],
-		answer:"A spinning arrow"
-	}, {
-		question:"In \'The Lion King,\'' what side of Scar's face is his scar on?",
-		choices:["Left", "Right"],
-		answer:"Left"
-	}, {
-		question:'In \"Frozen\", how many brothers does Hans have?',
-		choices:["7", "9", "12", "15"],
-		answer:"12"
-	}, {
-		question:'Finish the lyrics: \"My soul is spiraling in frozen fractals all around...\"',
-		choices:["That wraps my heart in a cold and distant past.",
-				"And one thought crystallizes like an icy blast.",
-				"Somehow I've now been given a new chance.",
-				"And all my problems are far gone in the past."],
-		answer:"And one thought crystallizes like an icy blast."
+		question: "True or False: Topgepi appears in the first series of Pokemon.",
+		choices:["false", "true"],
+		answer: "True"
+	},{
+		question: "What is the first Legendary bird Pokemon Ash sees?",
+		choices: ["Moltes", "Articuno", "Zapdos", "Lugia", "Ho-oh"],
+		answer: "Ho-oh"
+	},{
+		question: "Which Pokemon game was the first to make Pokemon sprites seem to move?",
+		choices: ["Diamond", "Crystal", "Red", "Emerald"],
+		answer: "Crystal"
+	},{
+		question: "In which Pokemon game can you obtain all the Kanto/Indigo starters?",
+		choices: ["Blue", "Green", "Yellow", "Red"],
+		answer: "Yellow"
+	},{
+		question: "How any total Pokemon are there in first generation?",
+		choices: ["237", "150", "151", "649", "469"],
+		answer: "151"
+	},{
+		question: "What was the first Pokemon Ash captured?",
+		choices: ["Squirtle", "Pidgeotto", "Pikachu" ,"Caterpie"],
+		answer: "Caterpie"
+	},{
+		question: "Which Pokemon is involved in a theory that expresses why Cubone wears a skull on its head?"
+		choices: ["Chansey", "Kangaskan", "Rhydon", "Marowak"],
+		answer: "Kangaskan"
+	},{
+		question: "This Pokemon was said to have been born from a another Pokemon in the video game. However, in a movie, it is said to be the first Pokemon to be created by humans. Who's that Pokemon?"
+		choices: ["Jirachu", "Rhydon", "Mewtwo", "Deoxys"],
+		answer: "Mewtwo"
+	},{
+		question: "How does an Eevee evolve into an Espeon or Umbreon?"
+		choice: ["By obtaining a certain level of happiness",
+				"By using a certain stone",
+				"By leveling up",
+				"by fighting in battles"],
+		answer: "By obtaining a certain level of happiness"
 	}
+
 ];
 
 var correct = 0;
