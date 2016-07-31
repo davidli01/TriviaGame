@@ -94,6 +94,30 @@ var begin = {
 		//make start button hidden/ disappear
 		document.querySelector(".submit").style.visibility = "hidden";
 
+		for(var i = 0; i < questions.length; i++){
+			//retrieve the whole question object
+
+			console.log(questions[i]);
+			//need to retrieve question, choices, answers in one loop
+			//template to display all ques, choices, ans
+			//after push everything to array
+			//if possible push before appending to the dom
+			//then use another loop out side of the first loop
+			//to create buttons etc
+			//this format to use multiple loops without
+			//placing loop within a loop
+		}
+
+
+
+
+
+
+
+
+
+
+
 
 		//display all the question
 		//loop through questions
