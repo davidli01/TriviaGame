@@ -26,20 +26,20 @@ var questions =
 		choices: ["Squirtle", "Pidgeotto", "Pikachu" ,"Caterpie"],
 		answer: "Caterpie"
 	},{
-		question: "Which Pokemon is involved in a theory that expresses why Cubone wears a skull on its head?"
+		question: "Which Pokemon is involved in a theory that expresses why Cubone wears a skull on its head?",
 		choices: ["Chansey", "Kangaskan", "Rhydon", "Marowak"],
 		answer: "Kangaskan"
 	},{
-		question: "This Pokemon was said to have been born from a another Pokemon in the video game. However, in a movie, it is said to be the first Pokemon to be created by humans. Who's that Pokemon?"
+		question: "This Pokemon was said to have been born from a another Pokemon in the video game. However, in a movie, it is said to be the first Pokemon to be created by humans. Who's that Pokemon?",
 		choices: ["Jirachu", "Rhydon", "Mewtwo", "Deoxys"],
 		answer: "Mewtwo"
 	},{
-		question: "How does an Eevee evolve into an Espeon or Umbreon?"
+		question: "How does an Eevee evolve into an Espeon or Umbreon?",
 		choice: ["By obtaining a certain level of happiness",
 				"By using a certain stone",
 				"By leveling up",
 				"by fighting in battles"],
-		answer: "By obtaining a certain level of happiness"
+		answer: "By obtaining a certain level of happiness",
 	}
 
 ];
@@ -98,6 +98,10 @@ var begin = {
 			//retrieve the whole question object
 
 			console.log(questions[i]);
+			var div = document.createElement('DIV');
+
+			var para = document.createElement('P');
+			var button = 			
 			//need to retrieve question, choices, answers in one loop
 			//template to display all ques, choices, ans
 			//after push everything to array
@@ -107,6 +111,8 @@ var begin = {
 			//this format to use multiple loops without
 			//placing loop within a loop
 		}
+	},
+};
 
 
 
@@ -115,10 +121,7 @@ var begin = {
 
 
 
-
-
-
-
+/*
 		//display all the question
 		//loop through questions
 		//loop questions to apply code to each, within each question
@@ -207,7 +210,7 @@ var begin = {
 		}
 	},
 };
-
+*/
 document.querySelector(".submit").onclick = begin.start;
 //begin.start();
 
